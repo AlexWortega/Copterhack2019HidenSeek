@@ -3,7 +3,7 @@ import numpy as np
 cap = cv2.VideoCapture(0)
 while True:
     _, frame = cap.read()
-    #ресайз по х и у чтобы соответсввать члену владельца
+    #ресайз по х и у 
     frameresized = cv2.resize(frame, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     hsv = cv2.blur(hsv, (5, 5))  # наложение стрмной маски чбшной
